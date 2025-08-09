@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Investments - Services</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    /* Navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255,255,255,0.05);
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        flex-wrap: wrap;
+    }
+    nav .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #00d1ff;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    nav ul li a:hover {
+        color: #00d1ff;
+    }
+    nav button {
+        background: #0f5b8d;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+    /* Services Section */
+    main {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        color: #00d1ff;
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .service-card {
+        background: white;
+        color: #203a43;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .service-card h3 {
+        margin-bottom: 15px;
+        color: #0f5b8d;
+    }
+    .service-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: rgba(255,255,255,0.05);
+        margin-top: 20px;
+        border-radius: 15px 15px 0 0;
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">💹 Elite Investments</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" style="color: #00d1ff; font-weight: bold;">Services</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+    <button onclick="window.location.href='login.html'">Logout</button>
+</nav>
+
+<main>
+    <h1>Our Services</h1>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Cryptocurrency Trading</h3>
+            <p>Buy, sell, and manage popular cryptocurrencies like Bitcoin, Ethereum, and Binance Coin with ease and security.</p>
+        </div>
+        <div class="service-card">
+            <h3>Stock Investments</h3>
+            <p>Invest in top-performing companies globally and grow your wealth through a diverse stock portfolio.</p>
+        </div>
+        <div class="service-card">
+            <h3>Commodities</h3>
+            <p>Trade gold, silver, crude oil, and other valuable commodities to hedge your portfolio against inflation.</p>
+        </div>
+        <div class="service-card">
+            <h3>Real Estate Funds</h3>
+            <p>Gain exposure to the real estate market without the hassle of property management through our real estate funds.</p>
+        </div>
+        <div class="service-card">
+            <h3>ETFs & Index Funds</h3>
+            <p>Invest in diversified exchange-traded funds and index funds to balance risk and reward effectively.</p>
+        </div>
+        <div class="service-card">
+            <h3>Investment Advisory</h3>
+            <p>Get personalized investment strategies from our team of expert advisors to maximize your returns.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Elite Investments. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

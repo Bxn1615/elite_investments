@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Investments - About Us</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    /* Navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255,255,255,0.05);
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        flex-wrap: wrap;
+    }
+    nav .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #00d1ff;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    nav ul li a:hover {
+        color: #00d1ff;
+    }
+    nav button {
+        background: #0f5b8d;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+    /* Content */
+    main {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        color: #00d1ff;
+    }
+    .about-section {
+        background: white;
+        color: #203a43;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+    .team {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .team-member {
+        background: white;
+        color: #203a43;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+    .team-member img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    .team-member h3 {
+        margin: 10px 0 5px;
+    }
+    .team-member p {
+        font-size: 0.9rem;
+        color: #555;
+    }
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: rgba(255,255,255,0.05);
+        margin-top: 20px;
+        border-radius: 15px 15px 0 0;
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">💹 Elite Investments</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html" style="color: #00d1ff; font-weight: bold;">About Us</a></li>
+    </ul>
+    <button onclick="">Logout</button>
+</nav>
+
+<main>
+    <h1>About Us</h1>
+
+    <div class="about-section">
+        <p>At <strong>Elite Investments</strong>, we believe that financial freedom should be accessible to everyone. 
+        Since our founding in 2020, we’ve been committed to providing innovative, secure, and user-friendly investment solutions 
+        that empower our clients to achieve their financial goals.</p>
+        <p>Our platform offers a diverse range of investment opportunities — from cryptocurrencies and stocks to commodities and ETFs — 
+        ensuring that both beginners and experienced traders can diversify their portfolios with confidence.</p>
+        <p>With cutting-edge technology, real-time market insights, and a dedicated team of financial experts, 
+        Elite Investments is more than just a trading platform — it’s your trusted partner in wealth creation.</p>
+    </div>
+
+    <h2 style="text-align:center; margin-top:40px; color:#00d1ff;">Meet Our Team</h2>
+    <div class="team">
+        <div class="team-member">
+            <img src="imgs/images1.jpeg" alt="CTO" style="max-width:300px; height:auto; border-radius:10px;" alt="CEO">
+            <h3>Jane Smith</h3>
+            <p>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+            <img src="imgs/images2.jpeg" alt="CTO" style="max-width:300px; height:auto; border-radius:10px;" alt="CTO">
+            <h3>Michael Johnson</h3>
+            <p>Chief Technology Officer</p>
+        </div>
+        <div class="team-member">
+            <img src="imgs/images4.jpeg" alt="CTO" style="max-width:300px; height:auto; border-radius:10px;" alt="Advisor">
+            <h3>Emily Davis</h3>
+            <p>Senior Investment Advisor</p>
+        </div>
+        <div class="team-member">
+            <img src="imgs/images3.jpg" alt="CTO" style="max-width:300px; height:auto; border-radius:10px;" alt="Analyst">
+            <h3>David Wilson</h3>
+            <p>Market Analyst</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Elite Investments. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

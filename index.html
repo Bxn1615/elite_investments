@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Investments</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    /* Navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255,255,255,0.05);
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        flex-wrap: wrap;
+    }
+    nav .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #00d1ff;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    nav ul li a:hover {
+        color: #00d1ff;
+    }
+    nav button {
+        background: #0f5b8d;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+    /* Main content */
+    main {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    .balance {
+        background: white;
+        color: #203a43;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .balance h2 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .balance p {
+        font-size: 2rem;
+        margin: 10px 0 0;
+        font-weight: bold;
+    }
+    .investments {
+        background: white;
+        color: #203a43;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        overflow-x: auto;
+        margin-bottom: 20px;
+    }
+    .investments h3 {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 400px;
+    }
+    table th, table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+        white-space: nowrap;
+    }
+    table th {
+        background: #f4f4f4;
+        font-weight: bold;
+    }
+    .profit {
+        color: green;
+        font-weight: bold;
+    }
+    .loss {
+        color: red;
+        font-weight: bold;
+    }
+    /* Charts section */
+    .charts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .chart-card {
+        background: white;
+        color: #203a43;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+    .chart-card h4 {
+        margin-bottom: 15px;
+    }
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: rgba(255,255,255,0.05);
+        margin-top: 20px;
+        border-radius: 15px 15px 0 0;
+    }
+    /* Mobile fixes */
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+        .charts {
+            grid-template-columns: 1fr;
+        }
+        .balance p {
+            font-size: 1.5rem;
+        }
+        table {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+</head>
+<body>
+<nav>
+    <div class="logo">💹 Elite Investments</div>
+    <ul>
+        <li><a href="index.html" style="color: #00d1ff; font-weight: bold;">Home</a></li>
+        <li><a href="services.html" >Services</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+    <button>Logout</button>
+</nav>
+
+<main>
+    <div class="balance">
+        <h2>Account Balance</h2>
+        <p>$2,000</p>
+    </div>
+
+    <div class="investments">
+        <h3>Your Investments</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Asset</th>
+                    <th>Amount Invested</th>
+                    <th>Current Value</th>
+                    <th>Profit/Loss</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Bitcoin (BTC)</td><td>$1,000</td><td>$1,500</td><td class="profit">+$500</td></tr>
+                <tr><td>Ethereum (ETH)</td><td>$800</td><td>$1,100</td><td class="profit">+$300</td></tr>
+                <tr><td>Binance Coin (BNB)</td><td>$400</td><td>$380</td><td class="loss">-$20</td></tr>
+                <tr><td>Tether (USDT)</td><td>$500</td><td>$500</td><td>$0</td></tr>
+                <tr><td>Apple Inc. (AAPL)</td><td>$1,200</td><td>$1,350</td><td class="profit">+$150</td></tr>
+                <tr><td>Amazon (AMZN)</td><td>$900</td><td>$850</td><td class="loss">-$50</td></tr>
+                <tr><td>Gold</td><td>$600</td><td>$640</td><td class="profit">+$40</td></tr>
+                <tr><td>Crude Oil</td><td>$700</td><td>$650</td><td class="loss">-$50</td></tr>
+                <tr><td>Vanguard S&P 500 ETF (VOO)</td><td>$1,000</td><td>$1,200</td><td class="profit">+$200</td></tr>
+                <tr><td>Real Estate Fund</td><td>$500</td><td>$500</td><td>$0</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="charts">
+        <div class="chart-card">
+            <h4>Portfolio Value Over Time</h4>
+            <canvas id="portfolioChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <h4>Asset Allocation</h4>
+            <canvas id="allocationChart"></canvas>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Elite Investments. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx1 = document.getElementById('portfolioChart').getContext('2d');
+    const portfolioChart = new Chart(ctx1, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Portfolio Value ($)',
+                data: [1500, 1700, 1650, 1800, 1900, 2000],
+                borderColor: '#00d1ff',
+                backgroundColor: 'rgba(0,209,255,0.2)',
+                fill: true,
+                tension: 0.3
+            }]
+        }
+    });
+
+    const ctx2 = document.getElementById('allocationChart').getContext('2d');
+    const allocationChart = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['Bitcoin', 'Ethereum', 'BNB', 'Stocks', 'Gold', 'ETF', 'Others'],
+            datasets: [{
+                data: [25, 20, 10, 20, 10, 10, 5],
+                backgroundColor: ['#f2a900', '#627eea', '#f3ba2f', '#0f5b8d', '#ffd700', '#28a745', '#888']
+            }]
+        }
+    });
+</script>
+</body>
+</html>
